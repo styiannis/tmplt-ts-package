@@ -1,0 +1,18 @@
+# For more information on ignoring files and folders on prettifying process, visit: https://prettier.io/docs/en/ignore.html
+
+############################
+# npm, yarn, pnpm
+############################
+
+node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+############################
+# Folders
+############################
+build
+code_documentation
+coverage_report
+dist
