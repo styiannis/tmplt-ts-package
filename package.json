@@ -1,6 +1,6 @@
 {
   "name": "typescript-modular-package-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Modular package template for TypeScript projects with CJS/ESM outputs and type declarations, preserving source structure",
   "keywords": [
     "typescript",
