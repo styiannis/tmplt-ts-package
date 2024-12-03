@@ -1,0 +1,147 @@
+{
+  "name": "typescript-modular-package-template",
+  "version": "1.0.0",
+  "description": "Modular package template for TypeScript projects with CJS/ESM outputs and type declarations, preserving source structure",
+  "keywords": [
+    "typescript",
+    "modular",
+    "package",
+    "template",
+    "rollup",
+    "cjs",
+    "esm"
+  ],
+  "author": "Yiannis Stergiou <hello@styiannis.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/styiannis/typescript-modular-package-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/styiannis/typescript-modular-package-template/issues"
+  },
+  "source": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/@types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "npx rimraf ./dist && rollup -c",
+    "dev": "npx rimraf ./dist && rollup -c --watch",
+    "check-types": "tsc --noEmit",
+    "check-updates": "npx npm-check-updates",
+    "ci": "npm run check-types && npm run lint && npm run build && npm run validate-exports",
+    "clear": "npx rimraf ./build ./code_documentation ./coverage_report ./dist",
+    "docs": "npx rimraf ./code_documentation && npx typedoc@latest --basePath ./ --entryPoints src/index.ts --entryPointStrategy Expand --readme none --includeVersion --out code_documentation",
+    "format": "npx prettier -w ./",
+    "lint": "npx oxlint@latest src",
+    "prepack": "npm i && npm run build",
+    "reset": "npm run clear && npx rimraf ./node_modules ./package-lock.json ./yarn.lock ./pnpm-lock.yaml",
+    "test": "jest",
+    "test-coverage": "npx rimraf ./coverage_report && jest --coverage --coverageDirectory=coverage_report",
+    "test-coverage-watch": "npm run test-coverage -- --watchAll",
+    "test-watch": "jest --watchAll",
+    "validate-exports": "node ./scripts/validate-exports.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.1",
+    "jest": "^29.7.0",
+    "rollup": "^4.28.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "ts-jest": "^29.2.5",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/@types/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/@types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./module-a": {
+      "import": {
+        "types": "./dist/@types/module-a/index.d.ts",
+        "default": "./dist/es/module-a/index.js"
+      },
+      "require": {
+        "types": "./dist/@types/module-a/index.d.ts",
+        "default": "./dist/cjs/module-a/index.js"
+      }
+    },
+    "./submodule-a1": {
+      "import": {
+        "types": "./dist/@types/module-a/submodule-a1.d.ts",
+        "default": "./dist/es/module-a/submodule-a1.js"
+      },
+      "require": {
+        "types": "./dist/@types/module-a/submodule-a1.d.ts",
+        "default": "./dist/cjs/module-a/submodule-a1.js"
+      }
+    },
+    "./submodule-a2": {
+      "import": {
+        "types": "./dist/@types/module-a/submodule-a2.d.ts",
+        "default": "./dist/es/module-a/submodule-a2.js"
+      },
+      "require": {
+        "types": "./dist/@types/module-a/submodule-a2.d.ts",
+        "default": "./dist/cjs/module-a/submodule-a2.js"
+      }
+    },
+    "./submodule-a3": {
+      "import": {
+        "types": "./dist/@types/module-a/submodule-a3.d.ts",
+        "default": "./dist/es/module-a/submodule-a3.js"
+      },
+      "require": {
+        "types": "./dist/@types/module-a/submodule-a3.d.ts",
+        "default": "./dist/cjs/module-a/submodule-a3.js"
+      }
+    },
+    "./submodule-b1": {
+      "import": {
+        "types": "./dist/@types/module-b/submodule-b1.d.ts",
+        "default": "./dist/es/module-b/submodule-b1.js"
+      },
+      "require": {
+        "types": "./dist/@types/module-b/submodule-b1.d.ts",
+        "default": "./dist/cjs/module-b/submodule-b1.js"
+      }
+    },
+    "./submodule-b2": {
+      "import": {
+        "types": "./dist/@types/module-b/submodule-b2.d.ts",
+        "default": "./dist/es/module-b/submodule-b2.js"
+      },
+      "require": {
+        "types": "./dist/@types/module-b/submodule-b2.d.ts",
+        "default": "./dist/cjs/module-b/submodule-b2.js"
+      }
+    },
+    "./submodule-b3": {
+      "import": {
+        "types": "./dist/@types/module-b/submodule-b3.d.ts",
+        "default": "./dist/es/module-b/submodule-b3.js"
+      },
+      "require": {
+        "types": "./dist/@types/module-b/submodule-b3.d.ts",
+        "default": "./dist/cjs/module-b/submodule-b3.js"
+      }
+    }
+  }
+}
