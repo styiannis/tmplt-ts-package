@@ -7,26 +7,26 @@
 ![Static Badge](https://img.shields.io/badge/Jest-ffffff?logo=jest&logoColor=c21325)
 ![Static Badge](https://img.shields.io/badge/Prettier-ffffff?logo=prettier&logoColor=f7ba3e)
 
-A modular package template for TypeScript projects with CJS/ESM outputs and type declarations, preserving source structure.
+A TypeScript package template delivering dual-format builds (CommonJS/ESM), comprehensive type declarations, and maintained source hierarchy for modular package development.
 
 ## Features
 
 ### Development
 
-- 🏗️ **Modular Structure** - Source structure preservation in build output for better code organization.
-- 📦 **Dual Module Support** - Build outputs in both CommonJS (CJS) and ESM formats.
-- 🔷 **Type Safety** - TypeScript declarations with preserved module structure.
+- 🏗️ **Modular Exports** - Preserves source structure in build output for optimal organization
+- 📦 **Dual Module System** - Seamless support for both CommonJS and ESM formats
+- 🔷 **Type Safety** - Strict TypeScript checking for enhanced reliability
 
-### Quality & Testing
+### Testing & Quality
 
-- 🔍 **Code Quality** - Type checking, linting and formatting.
-- 🧪 **Testing** - Comprehensive testing with Jest including coverage reporting.
-- 🔄 **Automation** - GitHub Actions workflows for continuous integration and delivery.
+- 🧪 **Testing** - Jest-powered test suite with coverage reporting
+- 🔍 **Code Quality** - Automated linting and formatting pipeline
+- 🔄 **CI/CD** - GitHub Actions for seamless integration workflow
 
-### Documentation & Tools
+### Tools & Documentation
 
-- 📝 **Documentation** - Automated API documentation using TypeDoc.
-- 🛠️ **Build System** - Efficient Rollup configuration for optimized bundling.
+- 🛠️ **Build Tools** - Optimized bundling with Rollup.js
+- 📝 **Documentation** - Automated TypeDoc API generation
 
 ## Table of Contents
 
@@ -118,7 +118,7 @@ npm install
 
 - `package.json` - Project configuration, dependencies and scripts. See [npm docs](https://docs.npmjs.com/cli/v10/configuring-npm/package-json)
 - `tsconfig.json` - TypeScript compiler settings for type checking and builds. See [TSConfig docs](https://www.typescriptlang.org/tsconfig)
-- `rollup.config.mjs` - Bundler setup for generating CJS/ESM/Types outputs. See [Rollup docs](https://rollupjs.org/configuration-options)
+- `rollup.config.mjs` - Bundler setup for generating CommonJS/ESM/Types outputs. See [Rollup docs](https://rollupjs.org/configuration-options)
 
 ### Testing Configuration
 
@@ -136,10 +136,10 @@ npm install
 
 #### build
 
-Build the package into CJS, ESM formats with TypeScript declarations in `./dist` folder:
+Build the package into CommonJS, ESM formats with TypeScript declarations in `./dist` folder:
 
 - `./dist/cjs/*` - CommonJS modules
-- `./dist/es/*` - ECMAScript modules
+- `./dist/es/*` - ESM modules
 - `./dist/@types/*` - TypeScript declarations
 
 ```sh
