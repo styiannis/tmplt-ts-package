@@ -7,14 +7,14 @@ if (pkg.exports) {
     const imp = pkg.exports[curr].import;
     const req = pkg.exports[curr].require;
 
-    if (undefined !== imp) {
-      if (!existsSync(imp.types)) acc.push(imp.types);
-      if (!existsSync(imp.default)) acc.push(imp.default);
+    if (imp) {
+      if (imp.types && !existsSync(imp.types)) acc.push(imp.types);
+      if (imp.default && !existsSync(imp.default)) acc.push(imp.default);
     }
 
-    if (undefined !== req) {
-      if (!existsSync(req.types)) acc.push(req.types);
-      if (!existsSync(req.default)) acc.push(req.default);
+    if (req) {
+      if (req.types && !existsSync(req.types)) acc.push(req.types);
+      if (req.default && !existsSync(req.default)) acc.push(req.default);
     }
 
     return acc;
