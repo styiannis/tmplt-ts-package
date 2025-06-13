@@ -1,6 +1,6 @@
 {
-  "name": "typescript-modular-package-template",
-  "version": "1.1.4",
+  "name": "tmplt-ts-package",
+  "version": "1.1.5",
   "description": "A TypeScript package template delivering dual-format builds (CommonJS/ESM), comprehensive type declarations, and maintained source hierarchy for modular package development",
   "keywords": [
     "typescript",
@@ -13,10 +13,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/styiannis/typescript-modular-package-template.git"
+    "url": "https://github.com/styiannis/tmplt-ts-package.git"
   },
   "bugs": {
-    "url": "https://github.com/styiannis/typescript-modular-package-template/issues"
+    "url": "https://github.com/styiannis/tmplt-ts-package/issues"
   },
   "source": "src/index.ts",
   "main": "dist/cjs/index.js",
@@ -52,11 +52,11 @@
     "@rollup/plugin-typescript": "^12.1.2",
     "@tsconfig/node22": "^22.0.2",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.15.21",
-    "jest": "^29.7.0",
-    "rollup": "^4.41.1",
+    "@types/node": "^24.0.1",
+    "jest": "^30.0.0",
+    "rollup": "^4.43.0",
     "rollup-plugin-dts": "^6.2.1",
-    "ts-jest": "^29.3.4",
+    "ts-jest": "^29.4.0",
     "tslib": "^2.8.1",
     "typescript": "^5.8.3"
   },
