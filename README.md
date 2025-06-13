@@ -1,4 +1,4 @@
-# TypeScript Modular Package Template
+# TypeScript Package Template
 
 ![Static Badge](https://img.shields.io/badge/Node.js-ffffff?logo=nodedotjs&logoColor=417e38)
 ![Static Badge](https://img.shields.io/badge/JavaScript-ffffff?logo=javascript&logoColor=fcdc00)
@@ -87,7 +87,7 @@ You can start using this template in two ways:
 **B.** Direct clone:
 
 ```sh
-git clone https://github.com/styiannis/typescript-modular-package-template my-package
+git clone https://github.com/styiannis/tmplt-ts-package my-package
 cd my-package
 npm install
 ```
@@ -297,8 +297,8 @@ For more information on configuring and using GitHub Actions, refer to the [GitH
 
 ## Issues and Support
 
-If you encounter any issues or have questions, please open an issue on the [GitHub Issue Tracker](https://github.com/styiannis/typescript-modular-package-template/issues).
+If you encounter any issues or have questions, please open an issue on the [GitHub Issue Tracker](https://github.com/styiannis/tmplt-ts-package/issues).
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/styiannis/typescript-modular-package-template?tab=MIT-1-ov-file#readme).
+This project is licensed under the [MIT License](https://github.com/styiannis/tmplt-ts-package?tab=MIT-1-ov-file#readme).
