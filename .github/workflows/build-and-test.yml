@@ -37,5 +37,11 @@ jobs:
       - name: Test script with coverage reporting
         run: npm run test-coverage
 
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: coverage_report/coverage-final.json
+
       - name: Environment reset
         run: npm run reset
