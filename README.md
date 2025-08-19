@@ -80,9 +80,9 @@ You can start using this template in two ways:
 
 **A.** Using GitHub's "_Use this template_" button:
 
-1.  Click the "_Use this template_" button at the top of the repository
-2.  Follow GitHub's instructions to create your repository
-3.  Clone your new repository locally
+1. Click the "_Use this template_" button at the top of the repository
+2. Follow GitHub's instructions to create your repository
+3. Clone your new repository locally
 
 **B.** Direct clone:
 
