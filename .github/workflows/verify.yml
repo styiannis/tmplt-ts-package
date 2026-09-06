@@ -35,10 +35,10 @@ jobs:
 
       # These two steps swap the runtime only -- the dist/ built above stays
       # put, which is the point: one build, loaded on both ends of the range.
-      - name: Set up Node.js 18 (engines floor)
+      - name: Set up Node.js 18.12.0 (engines floor)
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '18.12.0'
 
       - name: Check dist loads (Node 18)
         run: npm run check-dist-loads
